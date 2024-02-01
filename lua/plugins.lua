@@ -64,7 +64,7 @@ plugins = {
     'HiPhish/rainbow-delimiters.nvim',
 
     'nvim-treesitter/nvim-treesitter',
-
+    'onsails/lspkind.nvim'
 
 
 

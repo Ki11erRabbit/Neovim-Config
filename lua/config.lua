@@ -1,4 +1,5 @@
 require('config.neoscroll')
+require('config.lspkind')
 require('config.which-key')
 require('config.telescope')
 require('config.doom-one')
