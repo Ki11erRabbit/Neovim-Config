@@ -15,4 +15,5 @@ require('config.rainbow-delimiters')
 require('config.indent-blankline')
 require('config.markdown-preview')
 require('config.nvim-cmp')
+require('config.aerial')
 
