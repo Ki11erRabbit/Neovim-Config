@@ -30,6 +30,7 @@ cmp.setup {
         { name = 'buffer', group_index = 2 },
         { name = 'path', group_index = 2 },
         { name = 'cmdline', group_index = 2},
+        { name = 'conjure', group_index = 2},
 
     },
     completion = {
@@ -42,10 +43,10 @@ cmp.setup {
         ['<C-f>'] = cmp.mapping.scroll_docs(4),
         ['<C-Space>'] = cmp.mapping.complete(),
         ['<C-c>'] = cmp.mapping.close(),
-        --[[['<CR>'] = cmp.mapping.confirm {
+        ['<CR>'] = cmp.mapping.confirm {
             behavior = cmp.ConfirmBehavior.Insert,
             select = true,
-        },]]--
+        },
         ['<Tab>'] = vim.schedule_wrap(function(fallback)
             if cmp.visible() and has_words_before() then
                 cmp.select_next_item({ behavior = cmp.SelectBehavior.Select })

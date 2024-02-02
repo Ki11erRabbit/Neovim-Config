@@ -28,3 +28,8 @@ vim.opt.smartcase = true            -- but make it case sensitive if an uppercas
 vim.opt.wildmode = 'longest,list,full'
 
 
+
+if vim.g.neovide then
+    vim.o.guifont = 'JetBrainsMono_Nerd_Font:h12'
+
+end

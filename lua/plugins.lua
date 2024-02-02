@@ -64,10 +64,27 @@ plugins = {
     'HiPhish/rainbow-delimiters.nvim',
 
     'nvim-treesitter/nvim-treesitter',
-    'onsails/lspkind.nvim'
+    'onsails/lspkind.nvim',
 
 
-
+    {
+        "Olical/conjure",
+        ft = { "clojure", "fennel", "python" }, -- etc
+        -- [Optional] cmp-conjure for cmp
+        dependencies = {
+            {
+                "PaterJason/cmp-conjure",
+            },
+        },
+        config = function(_, opts)
+            require("conjure.main").main()
+            require("conjure.mapping")["on-filetype"]()
+        end,
+        init = function()
+               -- Set configuration options here
+            vim.g["conjure#debug"] = true
+        end,
+    }
 
 
 
