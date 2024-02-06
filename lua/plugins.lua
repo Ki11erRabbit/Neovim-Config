@@ -84,7 +84,7 @@ plugins = {
                -- Set configuration options here
             vim.g["conjure#debug"] = true
         end,
-    }
+    },
 
 
 
