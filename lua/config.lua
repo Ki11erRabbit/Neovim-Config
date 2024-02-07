@@ -17,4 +17,7 @@ require('config.indent-blankline')
 require('config.markdown-preview')
 require('config.nvim-cmp')
 require('config.aerial')
+require('config.cursorline')
+require('config.fm-nvim')
+require('config.koka')
 

@@ -86,6 +86,10 @@ plugins = {
         end,
     },
 
+    'yamatsum/nvim-cursorline',
+    'Ki11erRabbit/fm-nvim',
+    'elkasztano/nushell-syntax-vim',
+    'junegunn/vim-plug',
 
 
 

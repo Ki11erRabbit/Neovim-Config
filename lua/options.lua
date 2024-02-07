@@ -29,7 +29,22 @@ vim.opt.wildmode = 'longest,list,full'
 
 
 
+
 if vim.g.neovide then
     vim.o.guifont = 'JetBrainsMono_Nerd_Font:h12'
 
 end
+
+
+vim.api.nvim_create_autocmd('VimLeavePre', {
+    desc = 'change cwd dir on close',
+    pattern = '*',
+    callback = function()
+        file = io.open('/tmp/nvim_cwd', 'w')
+        path = vim.loop.cwd()
+        print('Writing to file: ' .. path)
+        file:write(path)
+        io.close(file)
+    end
+})
+
